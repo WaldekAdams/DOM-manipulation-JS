@@ -7,7 +7,8 @@
 .wrapper-forms {
     display: flex;
     justify-content: space-evenly;
-    padding-top: 10vh;
+    padding-top: 6vh;
+    margin-bottom: 6vh;
 
 }
 
@@ -18,24 +19,68 @@
     flex-wrap: wrap;
     padding: 15px 0;
     background-color: rgb(167, 164, 164);
+    box-shadow: 0 0 3px 1px black;
     align-items: center;
 
+    &.form--serch {
+        flex-flow: column nowrap;
+        justify-content: space-around;
+
+    }
+
     &__title {
-        flex-basis: 100%;
         text-align: center;
         margin-bottom: 20px;
         font-family: Arial, Helvetica, sans-serif;
+
+        .form--add & {
+            flex-basis: 100%;
+
+        }
     }
 
     &__input {
-        flex-basis: 40%;
         font-size: 18px;
         // text-align: center;
         padding: 8px 10px;
         margin-bottom: 20px;
+        border: none;
+
+        .form--serch & {
+            width: 60%;
+        }
+
+        .form--add & {
+            flex-basis: 40%;
+
+        }
     }
 
     &__btn {
-        flex-basis: 30%;
+        // flex-basis: 30%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding: 10px 14px;
+        box-shadow: 0 0 3px 1px black;
+        cursor: pointer;
+
+        .form--add & {
+            flex-basis: 30%;
+
+        }
+
     }
+
+}
+
+.footer {
+    width: 70vw;
+    margin: 30px auto 0;
+    text-align: center;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+    background-color: black;
+    color: white;
+
 }
