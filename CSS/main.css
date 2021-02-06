@@ -86,6 +86,17 @@
       flex-basis: 30%;
 }
 
+.result,
+.content {
+  margin: 0 auto;
+  max-width: 70vw;
+}
+
+.content {
+  -webkit-box-shadow: 0 0 3px 1px grey;
+          box-shadow: 0 0 3px 1px grey;
+}
+
 .footer {
   width: 70vw;
   margin: 30px auto 0;

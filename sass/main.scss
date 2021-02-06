@@ -75,7 +75,13 @@
 
 .result,
 .content {
+    margin: 0 auto;
     max-width: 70vw;
+
+}
+
+.content {
+    box-shadow: 0 0 3px 1px grey;
 }
 
 .footer {
