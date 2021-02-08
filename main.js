@@ -1,15 +1,30 @@
 const formAdd = document.querySelector('.form--add');
 const formSearch = document.querySelector('.form--serch');
 const content = document.querySelector('.content');
+// const result = document.querySelector('.result');
 
 const showInfo = function (elements, divResults) {
-    console.log(elements, divResults);
+    // console.log(elements, divResults);
+    elements.forEach((element) => {
+        const infoDiv = document.createElement('div');
+        infoDiv.innerHTML = `
+        <div><strong> ${element.nodeName} </strong></div>
+         <div> Klasa/Klasy elementu: ${element.className}</div>
+         <div>Wysokość elementu: ${element.offsetHeight}</div>
+         <div>Szerokość elementu: ${element.offsetWidth}</div>
+         <div>Odległość elementu od góry: ${element.offsetTop}</div>
+         `;
+
+        divResults.appendChild(infoDiv);
+        // console.log(elements)
+    })
 }
 
 const searchElements = (e, nameElement) => {
     e.preventDefault();
-    const elements = document.querySelectorAll(nameElement);
     const divResults = document.querySelector('.result');
+    divResults.textContent = '';
+    const elements = document.querySelectorAll(nameElement);
     // console.log(elements);
 
     if (elements.length > 0) {
