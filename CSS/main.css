@@ -92,6 +92,10 @@
   max-width: 70vw;
 }
 
+.result {
+  text-align: center;
+}
+
 .content {
   -webkit-box-shadow: 0 0 3px 1px grey;
           box-shadow: 0 0 3px 1px grey;
