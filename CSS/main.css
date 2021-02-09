@@ -94,6 +94,31 @@
 
 .result {
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.result__info-description {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.result__infoDiv {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  padding: 10px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0 0 2px 1px grey;
+          box-shadow: 0 0 2px 1px grey;
 }
 
 .content {

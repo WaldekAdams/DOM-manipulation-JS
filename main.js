@@ -7,6 +7,7 @@ const showInfo = function (elements, divResults) {
     // console.log(elements, divResults);
     elements.forEach((element) => {
         const infoDiv = document.createElement('div');
+        infoDiv.className = 'result__infoDiv';
         infoDiv.innerHTML = `
         <div><strong> ${element.nodeName} </strong></div>
          <div> Klasa/Klasy elementu: ${element.className}</div>
@@ -28,12 +29,12 @@ const searchElements = (e, nameElement) => {
     // console.log(elements);
 
     if (elements.length > 0) {
-        divResults.innerHTML = ` <p class = "result__info"> W tym dokumencie znalazlem ${elements.length} elementy ${nameElement}. </p>`
+        divResults.innerHTML = ` <p class = "result__info-description"> W tym dokumencie znalazlem ${elements.length} elementy  <strong>${nameElement}</strong>. </p>`
 
         showInfo(elements, divResults);
 
     } else {
-        divResults.innerHTML = ` <p class = "result__info"> W tym dokumencie nie znalazlem elementów ${nameElement}. </p>`;
+        divResults.innerHTML = ` <p class = "result__info-description"> W tym dokumencie nie znalazlem elementów ${nameElement}. </p>`;
         return;
     }
 }
